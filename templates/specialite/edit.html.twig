@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier Specialité{% endblock %}
+
+{% block body %}
+    <h1 class="title">Modifier Specialité</h1>
+
+    {{ include('specialite/_form.html.twig', {'button_label': 'Enregistrer'}) }}
+
+    <a href="{{ path('app_specialite_index') }}">Retour</a>
+
+    {{ include('specialite/_delete_form.html.twig') }}
+{% endblock %}

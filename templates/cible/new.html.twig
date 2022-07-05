@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvelle Cible{% endblock %}
+
+{% block body %}
+    <h1 class="title">Créer nouvelle Cible</h1>
+
+    {{ include('cible/_form.html.twig') }}
+
+    <a href="{{ path('app_cible_index') }}">Retour</a>
+{% endblock %}

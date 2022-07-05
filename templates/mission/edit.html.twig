@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier Mission{% endblock %}
+
+{% block body %}
+    <h1 class="title">Modifier Mission</h1>
+
+    {{ include('mission/_form.html.twig', {'button_label': 'Enregistrer'}) }}
+
+    <a href="{{ path('app_mission_index') }}">Retour</a>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+<table class="table">
+
+         {% if is_granted('ROLE_USER') %}
+             <button class="new-container-mission">
+                 <a href="{{ path('app_mission_new') }}" class="new">Créer nouvelle</a>
+            </button>
+         {% endif %}
+    <thead class="titre-colonne">
+        <tr>
+            <th>Id</th>
+            <th>Titre</th>
+            <th>Description</th>
+            <th>Nom de Code</th>
+            <th>Pays</th>
+            <th>Specialité</th>
+            <th>Action(s)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for mission in missions %}
+            <tr>
+                <td>{{ mission.id }}</td>
+                <td>{{ mission.title }}</td>
+                <td>{{ mission.description }}</td>
+                <td>{{ mission.codeName }}</td>
+                <td>{{ mission.country }}</td>
+                 <td>{% if mission.speciality %}
+                    {{ mission.speciality.name }} 
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="{{ path('app_mission_show', {'id': mission.id}) }}">Voir</a>
+                    {% if is_granted('ROLE_USER') %}
+                    <a href="{{ path('app_mission_edit', {'id': mission.id}) }}">Modifier</a>
+                    {% endif %}
+                </td>
+            </tr> 
+        {% else %}
+            <tr>
+                <td colspan="9">pas de résultat trouvé</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

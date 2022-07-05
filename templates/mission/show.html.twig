@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mission{% endblock %}
+
+{% block body %}
+    <h1 class="title">{{ mission.title }}</h1>
+
+    <table class="table table-show">
+        <tbody>
+            <tr>
+                <th class="th-show">Id</th>
+                <td>{{ mission.id }}</td>
+            </tr>
+            <tr>
+                <th class="th-show">Titre</th>
+                <td>{{ mission.title }}</td>
+            </tr>
+            <tr>
+                <th class="th-show">Description</th>
+                <td>{{ mission.description }}</td>
+            </tr>
+            <tr>
+                <th class="th-show">Nom de Code</th>
+                <td>{{ mission.codeName }}</td>
+            </tr>
+            <tr>
+                <th class="th-show">Pays</th>
+                <td>{{ mission.country }}</td>
+            </tr>
+            <tr>
+                <th class="th-show">Specialité</th>
+                <td>{% if mission.speciality %}
+                    {{ mission.speciality.name }} 
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th class="th-show">Agent(s)</th>
+                <td>{% for agents in mission.agents %}
+                    {{ agents.identificationCode }}
+                    {% endfor %}</td>
+            </tr>
+             <tr>
+                <th class="th-show">Contact(s)</th>
+                <td>{% for contacts in mission.contacts %}
+                    {{ contacts.codeName }}
+                    {% endfor %}
+                </td>
+            </tr>
+            <tr>
+                <th class="th-show">Cible(s)</th>
+                <td>{% for cibles in mission.cibles %}
+                    {{ cibles.codeName }}
+                    {% endfor %}
+                </td>
+            </tr>
+            <tr>
+                <th class="th-show">Planque(s)</th>
+                <td>{% for planques in mission.planques %}
+                    {{ planques.code }}
+                    {% endfor %}
+                </td>
+            </tr>
+            <tr>
+                <th class="th-show">Date Début</th>
+                <td>{{ mission.startDate ? mission.startDate|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th class="th-show">Date Fin</th>
+                <td>{{ mission.endDate ? mission.endDate|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th class="th-show">Statut</th>
+                <td>{% if mission.status %}
+                    {{ mission.status.name }} 
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <th class="th-show">Type</th>
+                 <td>{% if mission.type %}
+                    {{ mission.type.name }} 
+                    {% endif %}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="show-actions">
+        <a href="{{ path('app_mission_index') }}" class="show-retour">Retour</a>
+        <a href="{{ path('app_mission_edit', {'id': mission.id}) }}" class="show-modifier">Modifier</a>
+    </div>
+
+{% endblock %}

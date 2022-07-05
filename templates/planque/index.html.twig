@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Planques{% endblock %}
+
+{% block body %}
+    <h1 class="title">Liste des Planques</h1>
+
+    <button class="new-container">
+        <a href="{{ path('app_planque_new') }}" class="new">Créer nouvelle</a>
+    </button>
+
+    <table class="table table-index-page">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Code</th>
+                <th>Addresse</th>
+                <th>Pays</th>
+                <th>Type</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for planque in planques %}
+            <tr>
+                <td>{{ planque.id }}</td>
+                <td>{{ planque.code }}</td>
+                <td>{{ planque.address }}</td>
+                <td>{{ planque.country }}</td>
+                <td>{{ planque.type }}</td>
+                <td>
+                    <a href="{{ path('app_planque_show', {'id': planque.id}) }}">Voir</a>
+                    <a href="{{ path('app_planque_edit', {'id': planque.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">pas de résultat trouvé</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

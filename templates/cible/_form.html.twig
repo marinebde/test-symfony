@@ -1,0 +1,42 @@
+{{ form_start(form, {attr: {class: 'form-grid'}}) }}
+    
+    <div class="form-input-grid">
+         <div class="form-input-text">
+             {{ form_label(form.lastname, 'Nom: ') }}
+         </div>
+         {{ form_widget(form.lastname) }}
+     </div>
+
+     <div class="form-input-grid">
+         <div class="form-input-text">
+         {{ form_label(form.firstname, 'Prénom: ') }}
+         </div>
+         {{ form_widget(form.firstname) }}
+     </div>
+
+     <div class="form-input-grid">
+         <div class="form-input-text">
+         {{ form_label(form.date_of_birth, 'Date de naissance: ') }}
+         </div>
+         {{ form_widget(form.date_of_birth) }}
+     </div>
+
+     <div class="form-input-grid">
+         <div class="form-input-text">
+         {{ form_label(form.nationality, 'Nationalité: ') }}
+         </div>
+         {{ form_widget(form.nationality) }}
+     </div>
+
+     <div class="form-input-grid">
+         <div class="form-input-text">
+         {{ form_label(form.code_name, 'Nom de code: ') }}
+         </div>
+         {{ form_widget(form.code_name) }}
+     </div>
+
+    <div class="form-imput-agent">
+        <button class="btn">{{ button_label|default('Enregistrer') }}</button>
+    </div>
+
+{{ form_end(form) }}

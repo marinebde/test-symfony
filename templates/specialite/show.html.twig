@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Specialité{% endblock %}
+
+{% block body %}
+    <h1 class="title-show-page">{{ specialite.name }}</h1>
+
+    <table class="table table-show">
+        <tbody>
+            <tr>
+                <th class="th-show">Id</th>
+                <td>{{ specialite.id }}</td>
+            </tr>
+            <tr>
+                <th class="th-show">Nom</th>
+                <td>{{ specialite.name }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="show-actions">
+        <a href="{{ path('app_specialite_index') }}" class="show-retour">Retour</a>
+        <a href="{{ path('app_specialite_edit', {'id': specialite.id}) }}" class="show-modifier">Modifier</a>
+    </div>
+
+    <div class="show-supprimer">
+        {{ include('specialite/_delete_form.html.twig') }}
+    </div>
+    
+{% endblock %}

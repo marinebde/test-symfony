@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Agent{% endblock %}
+
+{% block body %}
+    <h1 class="title-show-page">{{ agent.lastname }} {{ agent.firstname }}</h1>
+
+    <table class="table table-show">
+        <tbody>
+            <tr>
+                <th class="th-show">Id</th>
+                <td>{{ agent.id }}</td>
+            </tr>
+            <tr>
+                <th class="th-show">Nom</th>
+                <td>{{ agent.lastname }}</td>
+            </tr>
+            <tr>
+                <th class="th-show">Prénom</th>
+                <td>{{ agent.firstname }}</td>
+            </tr>
+            <tr>
+                <th class="th-show">Date de Naissance</th>
+                <td>{{ agent.dateOfBirth ? agent.dateOfBirth|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th class="th-show">Code</th>
+                <td>{{ agent.identificationCode }}</td>
+            </tr>
+            <tr>
+                <th class="th-show">Nationalité</th>
+                <td>{{ agent.nationality }}</td>
+            </tr>
+            <tr>
+                <th class="th-show">Spécialité(s)</th>
+                <td>{% for specialite in agent.specialite %}
+                    {{ specialite.name }}
+                    {% endfor %}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="show-actions">
+        <a href="{{ path('app_agent_index') }}" class="show-retour">Retour</a>
+        <a href="{{ path('app_agent_edit', {'id': agent.id}) }}" class="show-modifier">Modifier</a>
+    </div>
+
+    <div class="show-supprimer">
+        {{ include('agent/_delete_form.html.twig') }}
+    </div>
+
+{% endblock %}

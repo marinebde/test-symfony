@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier Cible{% endblock %}
+
+{% block body %}
+    <h1 class="title">Modifier Cible</h1>
+
+    {{ include('cible/_form.html.twig', {'button_label': 'Enregistrer'}) }}
+
+    <a href="{{ path('app_cible_index') }}">Retour</a>
+
+    {{ include('cible/_delete_form.html.twig') }}
+{% endblock %}

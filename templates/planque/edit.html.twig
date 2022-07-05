@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier Planque{% endblock %}
+
+{% block body %}
+    <h1 class="title">Modifier Planque</h1>
+
+    {{ include('planque/_form.html.twig', {'button_label': 'Enregistrer'}) }}
+
+    <a href="{{ path('app_planque_index') }}">Retour</a>
+
+    {{ include('planque/_delete_form.html.twig') }}
+{% endblock %}

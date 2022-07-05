@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier Agent{% endblock %}
+
+{% block body %}
+    <h1 class="title">Modifier Agent</h1>
+
+    {{ include('agent/_form.html.twig', {'button_label': 'Enregistrer'}) }}
+
+    <a href="{{ path('app_agent_index') }}">Retour</a>
+
+    {{ include('agent/_delete_form.html.twig') }}
+{% endblock %}

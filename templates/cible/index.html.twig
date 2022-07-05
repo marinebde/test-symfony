@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Cibles{% endblock %}
+
+{% block body %}
+    <h1 class="title">Liste des Cibles</h1>
+
+    <button class="new-container">
+    <a href="{{ path('app_cible_new') }}" class="new">Créer nouvelle</a>
+    </button>
+
+    <table class="table table-index-page">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Date de Naissance</th>
+                <th>Nationalité</th>
+                <th>Code</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cible in cibles %}
+            <tr>
+                <td>{{ cible.id }}</td>
+                <td>{{ cible.lastname }}</td>
+                <td>{{ cible.firstname }}</td>
+                <td>{{ cible.dateOfBirth ? cible.dateOfBirth|date('Y-m-d') : '' }}</td>
+                <td>{{ cible.nationality }}</td>
+                <td>{{ cible.codeName }}</td>
+                <td>
+                    <a href="{{ path('app_cible_show', {'id': cible.id}) }}">Voir</a>
+                    <a href="{{ path('app_cible_edit', {'id': cible.id}) }}">Modifier</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">pas de résultat trouvé</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

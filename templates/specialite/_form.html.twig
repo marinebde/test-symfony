@@ -1,0 +1,14 @@
+{{ form_start(form, {attr: {class: 'form-grid'}}) }}
+
+    <div class="form-input-grid">
+         <div class="form-input-text">
+             {{ form_label(form.name, 'Nom: ') }}
+         </div>
+         {{ form_widget(form.name) }}
+     </div>
+
+    <div class="form-imput-agent">
+        <button class="btn">{{ button_label|default('Enregistrer') }}</button>
+    </div>
+
+{{ form_end(form) }}
