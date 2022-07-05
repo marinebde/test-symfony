@@ -1,0 +1,14 @@
+{{ form_start(form, {attr: {class: 'filter js-filter-form'}}) }}
+
+    <div class="div-recherche">
+    {{ form_row(form.q, {attr: {class: 'recherche'}}) }}
+    </div>
+
+
+    <h5 class ="pays">Pays</h5>
+    {{ form_row(form.countries, {attr: {class: 'filter-country'}}) }}
+
+    <h5 class="specialite">Spécialité</h5>
+    {{ form_row(form.specialites, {attr: {class: 'specialites'}}) }}
+
+{{ form_end(form) }}

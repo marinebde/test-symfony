@@ -51,7 +51,8 @@ class MissionRepository extends ServiceEntityRepository
     /**
      * Récupère les missions en lien avec une recherche
      * @return Mission[]
-     
+     */
+
     public function findSearch(SearchData $search): array
     {
         $query = $this
@@ -79,7 +80,7 @@ class MissionRepository extends ServiceEntityRepository
 
 
         return $query->getQuery()->getResult();
-    }*/
+    }
 
     /**
      * Récupère les nationalités de l'agent 

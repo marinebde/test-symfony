@@ -1,0 +1,17 @@
+.table-index-page {
+    width: 80%;
+    margin: auto;
+}
+
+.new-container {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 10rem;
+}
+
+.new {
+        text-transform: uppercase;
+        padding: 10px;
+        color: black;
+        font-size: 1rem;
+}

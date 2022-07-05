@@ -1,0 +1,97 @@
+.title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: blue;
+    text-transform: uppercase;
+}
+
+.js-filter {
+    display: flex;
+}
+
+.search {
+    width: 18rem;
+}
+
+.number-mission {
+    margin-top: 2em;
+    margin-bottom: 1em;
+    font-weight: 600;
+}
+
+.filter {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 23rem;
+    grid-template-rows: 4rem;
+}
+
+.div-recherche {
+    display: flex;
+    align-items: center;
+}
+
+.recherche {
+    width: 15em;
+    padding-right: 2em;
+    align-items: center;
+    margin: 1rem;
+}
+
+.pays {
+    text-align: center;
+    font-size: 1.3em;
+    display: flex;
+    justify-content: start;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.filter-country {
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    display: grid;
+    grid-template-columns: 2rem auto;
+    align-items: baseline;
+}
+
+.specialite {
+    text-align: center;
+    font-size: 1.3em;
+    display: flex;
+    justify-content: start;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+.specialites {
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    display: grid;
+    grid-template-columns: 2rem auto;
+    align-items: baseline;
+}
+
+.main {
+    margin-left: 3rem;
+    width: 70%;
+}
+
+.new-container-mission {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.titre-colonne {
+    background-color: gainsboro;
+    text-align: start;
+    font-size: 0.9em;
+}

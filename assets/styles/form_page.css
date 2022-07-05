@@ -1,0 +1,71 @@
+.form-ligne-1 {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.form-input {
+    display: flex;
+    align-self: center;
+    margin-left: 1rem;
+}
+
+.form-grid {
+    display: grid;
+}
+
+.form-input-grid {
+    display: grid;
+    width: 35rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-input-text {
+    margin-right: 0.8rem;
+}
+
+.description {
+    align-self: center;
+}
+
+.form-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+}
+
+.form-list {
+    margin-left: 0.8rem;
+}
+
+.form-checkbox {
+    display: inline;
+}
+
+input[type=checkbox] {
+    margin-left: 0.5rem;
+    margin-right: 0.2rem;
+}
+
+.form-date {
+    display: inline;
+    margin-left: 0.5rem;
+}
+
+#mission_start_date_year 
+{
+    margin-left: 0.5rem;
+}
+
+#mission_start_date_day{
+    margin-left: 0.5rem;
+}
+
+#mission_end_date_year {
+    margin-left: 0.5rem;
+}
+
+#mission_end_date_day {
+    margin-left: 0.5rem;
+}
