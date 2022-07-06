@@ -31,7 +31,7 @@ class MissionController extends AbstractController
         $missions = $repository->findSearch($data);
         if($request->get('ajax')) {
             return new JsonResponse([
-                'content' => $this->renderView('mission/_list.html.twig', ['missions' => $missions])
+                'content' => $this->renderView('mission/list.html.twig', ['missions' => $missions])
             ]);
         }
         return $this->render('mission/index.html.twig', [

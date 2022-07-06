@@ -13,8 +13,6 @@ class MainController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('mission/index.html.twig', [
-            'controller_name' => 'MissionController',
-        ]);
+        return $this->redirectToRoute('app_mission_index');
     }
 }
