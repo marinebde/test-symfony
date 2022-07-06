@@ -36,27 +36,32 @@
             </tr>
             <tr>
                 <th class="th-show">Agent(s)</th>
-                <td>{% for agents in mission.agents %}
+                <td>
+                    {% for agents in mission.agents %}
                     {{ agents.identificationCode }}
-                    {% endfor %}</td>
+                    {% endfor %}            
+                </td>
             </tr>
              <tr>
                 <th class="th-show">Contact(s)</th>
-                <td>{% for contacts in mission.contacts %}
+                <td>
+                    {% for contacts in mission.contacts %}
                     {{ contacts.codeName }}
                     {% endfor %}
                 </td>
             </tr>
             <tr>
                 <th class="th-show">Cible(s)</th>
-                <td>{% for cibles in mission.cibles %}
+                <td>
+                    {% for cibles in mission.cibles %}
                     {{ cibles.codeName }}
                     {% endfor %}
                 </td>
             </tr>
             <tr>
                 <th class="th-show">Planque(s)</th>
-                <td>{% for planques in mission.planques %}
+                <td>
+                    {% for planques in mission.planques %}
                     {{ planques.code }}
                     {% endfor %}
                 </td>
