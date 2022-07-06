@@ -262,7 +262,7 @@ class Mission
     /**
      * @return Collection<int, Planque>
      */
-    public function getPlanques(): Collection
+    public function getPlanque(): Collection
     {
         return $this->planques;
     }
