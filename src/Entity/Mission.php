@@ -267,7 +267,7 @@ class Mission
         return $this->planques;
     }
 
-    public function addPlanque(Planque $planque): self
+    public function addPlanques(Planque $planque): self
     {
         if (!$this->planques->contains($planque)) {
             $this->planques[] = $planque;
@@ -277,7 +277,7 @@ class Mission
         return $this;
     }
 
-    public function removePlanque(Planque $planque): self
+    public function removePlanques(Planque $planque): self
     {
         if ($this->planques->removeElement($planque)) {
             // set the owning side to null (unless already changed)
