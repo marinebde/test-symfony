@@ -50,7 +50,7 @@ class MissionType extends AbstractType
                 'class' => Agent::class,
                 'choice_label' => 'identification_code',
                 'multiple' => true,
-                'expanded' => false
+                'expanded' => true
             ])
             ->add('contacts', EntityType::class, [
                 'label' => 'Selectionner le(les) contact(s): ',
