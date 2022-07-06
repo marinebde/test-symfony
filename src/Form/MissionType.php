@@ -10,6 +10,7 @@ use App\Entity\Planque;
 use App\Entity\Specialite;
 use App\Entity\Status;
 use App\Entity\TypeMission;
+use phpDocumentor\Reflection\PseudoTypes\False_;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
@@ -49,7 +50,7 @@ class MissionType extends AbstractType
                 'class' => Agent::class,
                 'choice_label' => 'identification_code',
                 'multiple' => true,
-                'expanded' => true
+                'expanded' => false
             ])
             ->add('contacts', EntityType::class, [
                 'label' => 'Selectionner le(les) contact(s): ',
